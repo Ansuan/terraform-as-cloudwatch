@@ -152,7 +152,7 @@ resource "aws_autoscaling_policy" "instance_up" {
 }
 
 resource "aws_autoscaling_policy" "instance_down" {
-  name                   = "instance-as-down"
+  name                   = "instance-down"
   autoscaling_group_name = "${aws_autoscaling_group.emergya-as-group.name}"
   adjustment_type        = "ChangeInCapacity"
   scaling_adjustment     = -1
